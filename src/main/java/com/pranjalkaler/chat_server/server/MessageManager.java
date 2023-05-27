@@ -7,8 +7,6 @@ import java.util.List;
 
 public interface MessageManager {
 
-    // Singleton class
-
     void sendMessage(User sender, User receiver, Message message);
 
     List<Message> readMessages(User reader);

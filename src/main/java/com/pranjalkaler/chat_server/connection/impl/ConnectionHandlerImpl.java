@@ -2,14 +2,15 @@ package com.pranjalkaler.chat_server.connection.impl;
 
 import com.pranjalkaler.chat_server.connection.ConnectionHandler;
 import com.pranjalkaler.chat_server.models.Connection;
-import com.pranjalkaler.chat_server.models.MessageQueue;
 import com.pranjalkaler.chat_server.models.User;
 import com.pranjalkaler.chat_server.utils.Logger;
 import org.springframework.data.util.Pair;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class ConnectionHandlerImpl implements ConnectionHandler {
 
     // Needs to be a singleton (bean/Autowired)? idk

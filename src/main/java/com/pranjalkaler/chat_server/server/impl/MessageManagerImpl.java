@@ -7,18 +7,20 @@ import com.pranjalkaler.chat_server.models.User;
 import com.pranjalkaler.chat_server.server.MessageManager;
 import com.pranjalkaler.chat_server.utils.Logger;
 import com.pranjalkaler.chat_server.utils.MessageType;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class MessageManagerImpl implements MessageManager {
 
     private final ConnectionHandler connectionHandler;
 
     private final Logger logger;
 
-    public MessageManagerImpl() {
-        connectionHandler = new ConnectionHandlerImpl();
+    public MessageManagerImpl(ConnectionHandler connectionHandler) {
+        this.connectionHandler = connectionHandler;
         logger = new Logger(MessageManagerImpl.class);
     }
 
@@ -58,14 +60,15 @@ public class MessageManagerImpl implements MessageManager {
     @Override
     public List<Message> readMessages(User reader) {
 
+        var messages = new ArrayList<Message>();
+
         // fetch all the connections of this user
         var connections = this.connectionHandler.getAllConnections(reader);
         if (connections.isEmpty()) {
             logger.debug("No connections exist for user %s".formatted(reader.getUsername()));
-            return null;
+            return messages;
         }
 
-        var messages = new ArrayList<Message>();
         for (var connection : connections) {
 
             // from each connection, fetch all the messages directed to this user.
