@@ -1,6 +1,6 @@
-package com.pranjalkaler.chat_server.models;
+package com.pranjalkaler.server.models;
 
-import com.pranjalkaler.chat_server.utils.MessageType;
+import com.pranjalkaler.server.utils.MessageType;
 
 public class Message {
 

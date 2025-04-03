@@ -1,7 +1,7 @@
-package com.pranjalkaler.chat_server.server;
+package com.pranjalkaler.server.server;
 
-import com.pranjalkaler.chat_server.models.Message;
-import com.pranjalkaler.chat_server.models.User;
+import com.pranjalkaler.server.models.Message;
+import com.pranjalkaler.server.models.User;
 
 import java.util.List;
 

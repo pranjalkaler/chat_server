@@ -1,4 +1,4 @@
-package com.pranjalkaler.chat_server.utils;
+package com.pranjalkaler.server.utils;
 
 public enum MessageType {
 

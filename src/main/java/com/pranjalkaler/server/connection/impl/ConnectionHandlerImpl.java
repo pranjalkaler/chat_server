@@ -1,9 +1,9 @@
-package com.pranjalkaler.chat_server.connection.impl;
+package com.pranjalkaler.server.connection.impl;
 
-import com.pranjalkaler.chat_server.connection.ConnectionHandler;
-import com.pranjalkaler.chat_server.models.Connection;
-import com.pranjalkaler.chat_server.models.User;
-import com.pranjalkaler.chat_server.utils.Logger;
+import com.pranjalkaler.server.connection.ConnectionHandler;
+import com.pranjalkaler.server.models.Connection;
+import com.pranjalkaler.server.models.User;
+import com.pranjalkaler.server.utils.Logger;
 import org.springframework.data.util.Pair;
 import org.springframework.stereotype.Component;
 

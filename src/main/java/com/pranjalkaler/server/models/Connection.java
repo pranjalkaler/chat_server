@@ -1,4 +1,4 @@
-package com.pranjalkaler.chat_server.models;
+package com.pranjalkaler.server.models;
 
 import org.springframework.data.util.Pair;
 

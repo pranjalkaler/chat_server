@@ -1,4 +1,4 @@
-package com.pranjalkaler.chat_server;
+package com.pranjalkaler.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

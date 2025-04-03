@@ -1,10 +1,10 @@
-package com.pranjalkaler.chat_server.controller;
+package com.pranjalkaler.server.controller;
 
 
-import com.pranjalkaler.chat_server.models.Message;
-import com.pranjalkaler.chat_server.models.RequestMessage;
-import com.pranjalkaler.chat_server.server.MessageManager;
-import com.pranjalkaler.chat_server.utils.Logger;
+import com.pranjalkaler.server.models.Message;
+import com.pranjalkaler.server.models.RequestMessage;
+import com.pranjalkaler.server.server.MessageManager;
+import com.pranjalkaler.server.utils.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-import static com.pranjalkaler.chat_server.utils.UtilityTools.createMessage;
-import static com.pranjalkaler.chat_server.utils.UtilityTools.createUser;
+import static com.pranjalkaler.server.utils.UtilityTools.createMessage;
+import static com.pranjalkaler.server.utils.UtilityTools.createUser;
 
 @RestController
 @SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
