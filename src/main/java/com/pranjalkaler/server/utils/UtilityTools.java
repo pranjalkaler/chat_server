@@ -1,7 +1,7 @@
-package com.pranjalkaler.chat_server.utils;
+package com.pranjalkaler.server.utils;
 
-import com.pranjalkaler.chat_server.models.Message;
-import com.pranjalkaler.chat_server.models.User;
+import com.pranjalkaler.server.models.Message;
+import com.pranjalkaler.server.models.User;
 
 public class UtilityTools {
 
