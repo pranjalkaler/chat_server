@@ -1,9 +1,9 @@
-package com.pranjalkaler.server.server.impl;
+package com.pranjalkaler.server.messageManager.impl;
 
 import com.pranjalkaler.server.connection.ConnectionHandler;
 import com.pranjalkaler.server.models.Message;
 import com.pranjalkaler.server.models.User;
-import com.pranjalkaler.server.server.MessageManager;
+import com.pranjalkaler.server.messageManager.MessageManager;
 import com.pranjalkaler.server.utils.Logger;
 import com.pranjalkaler.server.utils.MessageType;
 import org.springframework.stereotype.Component;

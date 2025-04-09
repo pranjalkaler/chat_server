@@ -20,6 +20,7 @@ public class ConnectionHandlerImpl implements ConnectionHandler {
     private final Logger logger;
 
     public ConnectionHandlerImpl() {
+        // TODO: load connections from DB
         this.connections = new ArrayList<>();
         this.logger = new Logger(ConnectionHandlerImpl.class);
     }

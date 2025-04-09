@@ -1,4 +1,4 @@
-package com.pranjalkaler.server.server;
+package com.pranjalkaler.server.messageManager;
 
 import com.pranjalkaler.server.models.Message;
 import com.pranjalkaler.server.models.User;

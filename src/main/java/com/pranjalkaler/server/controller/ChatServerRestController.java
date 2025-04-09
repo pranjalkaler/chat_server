@@ -3,7 +3,8 @@ package com.pranjalkaler.server.controller;
 
 import com.pranjalkaler.server.models.Message;
 import com.pranjalkaler.server.models.RequestMessage;
-import com.pranjalkaler.server.server.MessageManager;
+import com.pranjalkaler.server.messageManager.MessageManager;
+import com.pranjalkaler.server.repository.DBRepository;
 import com.pranjalkaler.server.utils.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -26,10 +27,12 @@ public class ChatServerRestController {
 
     private final MessageManager messageManager;
     private final Logger logger;
+    private final DBRepository dbRepository;
 
     @Autowired
-    public ChatServerRestController(MessageManager messageManager) {
+    public ChatServerRestController(MessageManager messageManager, DBRepository dbRepository) {
         this.messageManager = messageManager;
+        this.dbRepository = dbRepository;
         logger = new Logger(ChatServerRestController.class);
     }
 
@@ -43,6 +46,7 @@ public class ChatServerRestController {
 
     @RequestMapping(path = "/messages", method = RequestMethod.GET)
     public List<Message> readMessages(@RequestParam String username, @RequestParam String email) {
+        logger.debug("DB TEST LOG: " + dbRepository.testDB());
         var receiver = createUser(username, email);
         var messages = messageManager.readMessages(receiver);
         logger.debug(messages.toString());
